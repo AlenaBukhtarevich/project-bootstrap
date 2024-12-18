@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap w/ Webpack</title>
+  <script defer src="main.js"></script></head>
+
+  <body>
+    <header class="text-center bg-light">
+      <div class="row align-items-center">
+        <div class="col">Бренд</div>
+
+        <div class="col-6 d-none d-md-block">
+          <ul class="navbar-nav d-flex justify-content-center flex-row">
+            <li class="nav-item">
+              <a class="nav-link active px-3" href="#home">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#catalog">Каталог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#">Цены</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Кнопка -->
+        <div class="col d-none d-md-block">
+          <a
+            href="#"
+            class="btn btn-primary rounded-top-end rounded-bottom-start"
+            id="callOrderButton"
+          >
+            <img
+              src="https://emkosti.sevbaza.com/assets/templates/site/statics/img/Circle-icons-phone.svg.png"
+              alt="phone"
+              style="width: 24px; height: 24px"
+            />
+            Заказать звонок
+          </a>
+        </div>
+
+        <!-- Кнопка для мобильного меню -->
+        <div class="col text-end d-md-none">
+          <button
+            class="btn btn-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileMenu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <img
+              src="https://emkosti.sevbaza.com/assets/templates/site/statics/img/Circle-icons-phone.svg.png"
+              alt="phone"
+              style="width: 24px; height: 24px"
+            />
+          </button>
+          <button
+            class="btn btn-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasMenu"
+            aria-controls="offcanvasMenu"
+          >
+            <img
+              src="https://banner2.cleanpng.com/20180429/okq/kisspng-computer-icons-menu-cafe-5ae5cda75d2bc2.8582560415250098313816.jpg"
+              alt="phone"
+              style="width: 24px; height: 24px"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div
+      class="offcanvas offcanvas-end bg-white text-dark"
+      tabindex="-1"
+      id="offcanvasMenu"
+      aria-labelledby="offcanvasMenuLabel"
+    >
+      <h5 class="offcanvas-title m-3" id="offcanvasMenuLabel">Меню</h5>
+      <ul class="navbar-nav d-flex justify-content-center flex-column">
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#home">Главная</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#catalog">Каталог</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">Цены</a>
+        </li>
+      </ul>
+    </div>
+
+    <section
+      id="home"
+      class="position-relative vh-100 d-flex justify-content-center align-items-center"
+    >
+      <video
+        class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+        playsinline="playsinline"
+        autoplay="autoplay"
+        muted="muted"
+        loop="loop"
+      >
+        <source
+          src="https://gitrequests.github.io/interview-bootstrap/assets/video.mp4"
+          type="video/mp4"
+        />
+        Ваш браузер не поддерживает видео.
+      </video>
+
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"
+      ></div>
+
+      <div
+        class="container w-50 my-20 h-50 d-flex flex-column justify-content-center align-items-center position-relative z-3"
+      >
+        <div class="position-absolute top-0 start-0">
+          <h1 class="display-5 d-md-block text-center">
+            Купить <span class="text-danger">товар</span> с доставкой
+          </h1>
+          <h4 class="display-10 d-md-block text-center">
+            Официальный поставщик <span class="text-danger">товаров</span> в
+            Стране!
+          </h4>
+        </div>
+        <a
+          href="#"
+          class="position-absolute bottom-0 start-0 btn btn-primary rounded-top-end rounded-bottom-start"
+          >Заказать звонок</a
+        >
+        <p class="position-absolute bottom-0 end-0 small text-white">
+          Ваши данные <br />
+          под надежной защитой
+        </p>
+      </div>
+    </section>
+    <div id="catalog" class="bg-dark text-center">
+      <h3 class="display-4 text-white">Каталог</h3>
+    </div>
+
+    <section class="catalog container my-5">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Карточка 1 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://gitrequests.github.io/interview-bootstrap/assets/image.webp"
+              class="card-img-top"
+              alt="image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Товар 1</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <ul>
+                <li>An item</li>
+                <li>A second item</li>
+                <li>A third item</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary w-100">Купить</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://gitrequests.github.io/interview-bootstrap/assets/image.webp"
+              class="card-img-top"
+              alt="image"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Товар 2</h5>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary w-100">Купить</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
